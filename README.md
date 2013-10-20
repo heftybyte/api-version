@@ -3,6 +3,8 @@ api methods
 
 Wrapper for express routing methods to help with versioning apis
 
+
+##Usage
 ```javascript
 var apim = require('api-methods');
 var app = express();
