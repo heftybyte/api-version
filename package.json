@@ -5,7 +5,7 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/heftybyte/api-methods.git"
+    "url": "git://github.com/heftybyte/api-version.git"
   },
   "author": {
     "name": "Esco Obong",

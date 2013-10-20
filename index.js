@@ -1,9 +1,9 @@
 var methods = require('methods');
-var cache = {};
+var cache = [];
 
-function API(app, prefix) {
+function API(app, base, version) {
     this.app = app;
-    this.prefix = prefix;
+    this.prefix = base + (version ? '/' + version : '');
 }
 
 methods.forEach(function(method){
@@ -14,9 +14,28 @@ methods.forEach(function(method){
     };
 });
 
-module.exports = function expose(app, base, version) {
-    var versionKey = base + (version ? '/' + version : '');
-    cache[app] = cache[app] || {};
-    cache[app][versionKey] = cache[app][versionKey] || new API(app, versionKey);
-    return cache[app][versionKey];
-};
+function get(argsObject) {
+    var cached = cache.filter(function(args){
+        return args.a === argsObject.a && args.b === argsObject.b && args.v === argsObject.v;
+    })[0];
+    return cached ? cached.api : false;
+}
+
+function store(argsObject) {
+    cache.push(argsObject);
+}
+
+function version(app, base, version) {
+    var args = {a:app, b:base, v:version};
+    var api = get(args);
+
+    if (!api) {
+      api = new API(app, base, version);
+      args.api = api;
+      store(args);
+    }
+
+    return api;
+}
+
+exports.version = version;
