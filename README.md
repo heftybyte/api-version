@@ -1,4 +1,4 @@
-api methods
+api version
 ====
 
 Wrapper for express routing methods to help with versioning apis
@@ -6,10 +6,11 @@ Wrapper for express routing methods to help with versioning apis
 
 ##Usage
 ```javascript
-var apim = require('api-methods');
+var apiv = require('api-version');
 var app = express();
-var api = apim.version(app, '/api', 'v1');
-var api2 = apim.version(app, '/api', 'v2');
+
+var api = apiv.version(app, '/api', 'v1');
+var api2 = apiv.version(app, '/api', 'v2');
 
 api.get('/user', function(){
 
