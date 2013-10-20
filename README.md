@@ -4,9 +4,10 @@ api methods
 Wrapper for express routing methods to help with versioning apis
 
 ```javascript
+var apim = require('api-methods');
 var app = express();
-var api = require('api-methods')(app, '/api', 'v1');
-var api2 = require('api-methods')(app, '/api', 'v2');
+var api = apim.version(app, '/api', 'v1');
+var api2 = apim.version(app, '/api', 'v2');
 
 api.get('/user', function(){
 
