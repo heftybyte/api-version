@@ -1,0 +1,22 @@
+{
+  "name": "api-methods",
+  "version": "0.0.1",
+  "description": "Wrapper for express routing methods to help with versioning apis",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/heftybyte/api-methods.git"
+  },
+  "author": {
+    "name": "Esco Obong",
+    "email": "menzoic@gmail.com"
+  },
+  "dependencies": {
+    "methods": "0.0.1"
+  },
+  "devDependencies": {
+    "buster": "~0.7.6",
+    "supertest": "~0.8.0",
+    "express": "~3.4.2"
+  }
+}
