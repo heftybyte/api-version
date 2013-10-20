@@ -3,7 +3,7 @@ api methods
 
 Wrapper for express routing methods to help with versioning apis
 
-```
+```javascript
 var app = express();
 var api = require('api-methods')(app, '/api', 'v1');
 var api2 = require('api-methods')(app, '/api', 'v2');
@@ -23,12 +23,12 @@ api2.get('/user', function(){
 
 Since the routes were added using api instead of app, the routes turn out to be
 
-```
+```javascript
 /api/v1/user
 ```
 
 and
 
-```
+```javascript
 /api/v2/user
 ```
