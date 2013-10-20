@@ -23,12 +23,12 @@ api2.get('/user', function(){
 
 Since the routes were added using api instead of app, the routes turn out to be
 
-```javascript
+```
 /api/v1/user
 ```
 
 and
 
-```javascript
+```
 /api/v2/user
 ```
