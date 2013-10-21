@@ -1,6 +1,8 @@
 var methods = require('methods');
 var cache = [];
 
+methods.push('del');
+
 function API(app, base, version) {
     this.app = app;
     this.prefix = base + (version ? '/' + version : '');
