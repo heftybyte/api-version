@@ -12,7 +12,7 @@
     "email": "menzoic@gmail.com"
   },
   "dependencies": {
-    "methods": "0.0.1"
+    "methods": "0.1.0"
   },
   "devDependencies": {
     "buster": "~0.7.6",
