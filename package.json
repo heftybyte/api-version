@@ -1,6 +1,6 @@
 {
   "name": "api-version",
-  "version": "0.0.5",
+  "version": "0.1.0",
   "description": "Wrapper for express routing methods to help with versioning apis",
   "main": "index.js",
   "repository": {
