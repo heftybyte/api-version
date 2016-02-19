@@ -1,6 +1,10 @@
 api version
 ====
 
+Deprecated
+===
+Use the mounting feature in express instead http://expressjs.com/en/4x/api.html#app.onmount
+
 Wrapper for express routing methods to help with versioning apis
 
 
