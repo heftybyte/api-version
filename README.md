@@ -1,42 +1,43 @@
-api version
-====
 
 Deprecated
 ===
 Use the mounting feature in express instead http://expressjs.com/en/4x/api.html#app.onmount
 
-Wrapper for express routing methods to help with versioning apis
+>api version
+====
+
+>Wrapper for express routing methods to help with versioning apis
 
 
-##Usage
+>##Usage
 ```javascript
-var apiv = require('api-version');
-var app = express();
+>var apiv = require('api-version');
+>var app = express();
 
-var api = apiv.version(app, '/api', 'v1');
-var api2 = apiv.version(app, '/api', 'v2');
+>var api = apiv.version(app, '/api', 'v1');
+>var api2 = apiv.version(app, '/api', 'v2');
 
-api.get('/user', function(){
+>api.get('/user', function(){
 
-});
+>});
 
-api.post('/user', function(){
+>api.post('/user', function(){
 
-});
+>});
 
-api2.get('/user', function(){
+>api2.get('/user', function(){
 
-});
-```
+>});
+>```
 
-Since the routes were added using api instead of app, the routes turn out to be
+>Since the routes were added using api instead of app, the routes turn out to be
 
-```
+>```
 /api/v1/user
 ```
 
-and
+>and
 
-```
+>```
 /api/v2/user
 ```
